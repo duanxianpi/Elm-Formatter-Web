@@ -10,12 +10,20 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import axios from 'axios';
 
 class MianPage extends React.Component {
     state = {
         code : "",
         formattedCode : ""
+    }
+    componentDidMount() {
+        // Your axios request here
+        const apiUrl = ""
+        const data = this.state.code
+        axios({method:'post', url:apiUrl, data}).then((response) => {
+            this.setState({formattedCode: response.data})
+        })
     }
     format = () => {
         this.setState({formattedCode : ""})

@@ -1,8 +1,8 @@
-const { spawnSync } = require('child_process');
+import { spawnSync } from 'child_process';
 
 const elmFomartPath = "../node_modules/.bin/";
 
-function formating(code) {
+function formatting(code) {
     const elmFomartor = spawnSync("elm-format.Cmd", ['--stdin'], {input : code, cwd : elmFomartPath})
 
     switch(elmFomartor.status) {
@@ -15,6 +15,6 @@ function formating(code) {
     }
 
 }
-
-console.log(formating (`moduled Dom.Compsonents.Header;;`
+export default formatting
+console.log(formatting (`moduled Dom.Compsonents.Header;;`
 ));
