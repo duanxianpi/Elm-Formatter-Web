@@ -9,7 +9,7 @@ var cors = require("cors");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static("__dirname/../build"));
+app.use(express.static(__dirname+"/../build"));
 app.post("/formating", async (req, res) => {
   return res.send({
     code: formator.formating(req.body.code)

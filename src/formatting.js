@@ -1,9 +1,11 @@
 const { spawnSync } = require('child_process');
 
-const elmFomartPath = "__dirname/../node_modules/.bin/";
+const elmFomartPath = __dirname+"/../node_modules/elm-format/bin/";
+
+const command = process.platform === 'win32' ? 'elm-format.cmd' : 'elm-format';
 
 function formating(code) {
-    const elmFomartor = spawnSync("elm-format.cmd", ['--stdin'], {input : code, cwd : elmFomartPath})
+    const elmFomartor = spawnSync(elmFomartPath + command, ["--stdin"]  , {input : code});
 
     switch(elmFomartor.status) {
         case 0:
