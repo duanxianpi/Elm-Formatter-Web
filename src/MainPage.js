@@ -17,16 +17,13 @@ class MianPage extends React.Component {
         code : "",
         formattedCode : ""
     }
-    componentDidMount() {
-        // Your axios request here
-        const apiUrl = ""
-        const data = this.state.code
-        axios({method:'post', url:apiUrl, data}).then((response) => {
-            this.setState({formattedCode: response.data})
-        })
-    }
     format = () => {
-        this.setState({formattedCode : ""})
+        // Your axios request here
+        const apiUrl = "/formating"
+        const data = {'code':this.state.code}
+        axios({method:'post', url:apiUrl, data}).then((response) => {
+            this.setState({formattedCode: response.data.code})
+        })
     }
     onChange = (newValue) => {
         this.setState({code : newValue});
