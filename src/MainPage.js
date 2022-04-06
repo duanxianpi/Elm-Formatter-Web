@@ -41,7 +41,7 @@ class MianPage extends React.Component {
                 <Container>
                     <Row className='justify-content-center align-items-center'>
                         <Col className='col-md-auto'>
-                            <a href="/"><img className='title' src={this.state.darkMode ? titleDark : title} draggable = {false} alt=""/></a>
+                            <a href="https://github.com/duanxianpi/ElmFormator" target="_blank" draggable = {false}><img className='title' src={this.state.darkMode ? titleDark : title} draggable = {false} alt=""/></a>
                         </Col>
                         <Col className='col-md-auto text-right'>
                             <Button variant="light" className={this.state.darkMode ? "themeBtn_dark" : "themeBtn"} onClick={this.changeTheme}></Button>
