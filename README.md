@@ -28,9 +28,9 @@ Welcome to try at https://www.elm-formator.tk/
 Before you start to install please make sure you already installed node.js.
 
 ```bash
-   git clone https://github.com/duanxianpi/ElmFormator
-   cd ElmFormator
-   npm install
+ git clone https://github.com/duanxianpi/ElmFormator
+ cd ElmFormator
+ npm install
 ```
 
 # Build
