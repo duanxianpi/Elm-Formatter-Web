@@ -5,11 +5,11 @@
   A elm code format web app based on elm-format and React.js
 </p>
 <p align="center">
-  <a href="https://github.com/duanxianpi/ElmFormator/blob/main/LICENSE.md">  
-    <img alt="GitHub" src="https://img.shields.io/github/license/duanxianpi/ElmFormator?label=License">
+  <a href="https://github.com/duanxianpi/ElmFormat/blob/main/LICENSE.md">  
+    <img alt="GitHub" src="https://img.shields.io/github/license/duanxianpi/Elm-Formatter-Web?label=License">
   </a>
   <a href="https://github.com/duanxianpi/ElmFormator">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/duanxianpi/ElmFormator"/>
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/duanxianpi/Elm-Formatter-Web"/>
   </a>
   <a href="https://github.com/duanxianpi">
     <img alt="GitHub user" src="https://img.shields.io/badge/author-duanxianpi-brightgreen"/>
@@ -20,16 +20,16 @@
 </p>
 
 # Introduction
-Elm Formator is a web application allow you to format you Elm code by [elm code style](https://elm-lang.org/docs/style-guide). The fomator is based on [elm-format](https://github.com/avh4/elm-format) and the frontend is React.JS. 
+Elm-Formatter-Web is a web application allow you to format you Elm code by [elm code style](https://elm-lang.org/docs/style-guide). The fomatter is based on [elm-format](https://github.com/avh4/elm-format) and the frontend is React.JS. 
 
-Welcome to try at https://www.elm-formator.tk/
+Welcome to try at https://www.elm-formatter.tk/
 
 # Installation
 Before you start to install please make sure you already installed node.js.
 
 ```bash
- git clone https://github.com/duanxianpi/ElmFormator
- cd ElmFormator
+ git clone https://github.com/duanxianpi/Elm-Formatter-Web
+ cd Elm-Formatter-Web
  npm install
 ```
 
@@ -45,6 +45,6 @@ npm start
 It will open a port at 3000. You can visit at http://localhost:3000
 
 # Contributors 
-<a href="https://github.com/duanxianpi/ElmFormator/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=duanxianpi/ElmFormator" />
+<a href="https://github.com/duanxianpi/Elm-Formatter-Web/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=duanxianpi/Elm-Formatter-Web" />
 </a>
