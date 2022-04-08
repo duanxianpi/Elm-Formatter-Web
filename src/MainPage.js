@@ -35,13 +35,17 @@ class MianPage extends React.Component {
     changeTheme = () => {
         this.setState({darkMode : !this.state.darkMode})
     }
+    cp = () => {
+        navigator.clipboard.writeText(this.state.formattedCode);
+        alert("Copied to clipboard!");
+    }
     render() {
         return (
             <div className={this.state.darkMode ? 'frame_dark' : 'frame'}>
                 <Container>
                     <Row className='justify-content-center align-items-center'>
                         <Col className='col-md-auto'>
-                            <a href="https://github.com/duanxianpi/ElmFormator" target="_blank" draggable = {false}><img className='title' src={this.state.darkMode ? titleDark : title} draggable = {false} alt=""/></a>
+                            <a href="https://github.com/duanxianpi/ElmFormatter" target="_blank" draggable = {false}><img className='title' src={this.state.darkMode ? titleDark : title} draggable = {false} alt=""/></a>
                         </Col>
                         <Col className='col-md-auto text-right'>
                             <Button variant="light" className={this.state.darkMode ? "themeBtn_dark" : "themeBtn"} onClick={this.changeTheme}></Button>
@@ -49,8 +53,9 @@ class MianPage extends React.Component {
                     </Row>
                     <Row className={(this.state.darkMode ? 'content_dark' : 'content border border_dark') + " justify-content-center align-items-end rounded"}>
                         <Col className='col-md-auto'>
-                            <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Input:</span>
-                            <AceEditor className='editor border border-secondary'
+                            <Col> <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Input:</span></Col>
+ 
+                             <AceEditor className='editor border border-secondary'
                                 mode="elm"
                                 theme= {this.state.darkMode ? "one_dark" : "xcode"}
                                 onChange={this.onChange}
@@ -61,11 +66,10 @@ class MianPage extends React.Component {
                                 editorProps={{ $blockScrolling: true }}
                             />
                         </Col>
-                        {/* <Col className='col-md-auto'><Button className="" variant="primary" onClick={this.format}>Code Format</Button>
-                        </Col> */}
+
                         <Col className='col-md-auto'>
-                            <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Output:</span>
-                            <AceEditor className='editor border border-secondary'
+                            <Col> <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Output:</span></Col>
+                            <Col><AceEditor className='editor border border-secondary'
                                 mode="elm"
                                 theme= {this.state.darkMode ? "one_dark" : "xcode"}
                                 name="ootputEditor"
@@ -76,6 +80,9 @@ class MianPage extends React.Component {
                                 width={565}
                                 editorProps={{ $blockScrolling: true }}
                             />
+                            </Col>
+                        </Col>
+                        <Col className='col-md-auto'><Button class="btn btn-success pull-right" onClick={this.cp}>✂</Button>
                         </Col>
                     </Row>
                 </Container>
