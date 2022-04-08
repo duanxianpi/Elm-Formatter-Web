@@ -20,18 +20,34 @@
 </p>
 
 # Introduction
-Elm-Formatter-Web is a web application allow you to format you Elm code by [elm code style](https://elm-lang.org/docs/style-guide). The fomatter is based on [elm-format](https://github.com/avh4/elm-format) and the frontend is React.JS. 
+Elm-Formatter-Web is a web application allow you to format you Elm code by [elm code style](https://elm-lang.org/docs/style-guide). The formatter is based on [elm-format](https://github.com/avh4/elm-format) and the frontend is React.JS. 
 
 Welcome to try at https://www.elm-formatter.tk/
+
+# Cloning
+Option 1:
+```bash
+ git clone https://github.com/duanxianpi/Elm-Formatter-Web
+```
+And enter your personal access token.
+
+Option 2:
+Generate an SSH key by following [this tutorial](https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html).
+
+```
+git clone git@github.com:duanxianpi/Elm-Formatter-Web.git
+```
 
 # Installation
 Before you start to install please make sure you already installed node.js.
 
-```bash
- git clone https://github.com/duanxianpi/Elm-Formatter-Web
+```
  cd Elm-Formatter-Web
  npm install
 ```
+
+# Update
+If the version of your node.js is too low, please update it to 16.13.1 following [this tutorial](https://phoenixnap.com/kb/update-node-js-version).
 
 # Build
 ```
