@@ -18,7 +18,7 @@ class MianPage extends React.Component {
     state = {
         code: "",
         formattedCode: "",
-        darkMode : false,
+        darkMode: false,
     }
     format = () => {
         // Your axios request here
@@ -33,11 +33,11 @@ class MianPage extends React.Component {
         this.format();
     }
     changeTheme = () => {
-        this.setState({darkMode : !this.state.darkMode})
+        this.setState({ darkMode: !this.state.darkMode })
     }
     cp = () => {
         navigator.clipboard.writeText(this.state.formattedCode);
-        alert("Copied to clipboard!");
+        alert("Copied");
     }
     render() {
         return (
@@ -45,7 +45,7 @@ class MianPage extends React.Component {
                 <Container>
                     <Row className='justify-content-center align-items-center'>
                         <Col className='col-md-auto'>
-                            <a href="https://github.com/duanxianpi/ElmFormatter" target="_blank" draggable = {false}><img className='title' src={this.state.darkMode ? titleDark : title} draggable = {false} alt=""/></a>
+                            <a href="https://github.com/duanxianpi/Elm-Formatter-Web" target="_blank" draggable={false}><img className='title' src={this.state.darkMode ? titleDark : title} draggable={false} alt="" /></a>
                         </Col>
                         <Col className='col-md-auto text-right'>
                             <Button variant="light" className={this.state.darkMode ? "themeBtn_dark" : "themeBtn"} onClick={this.changeTheme}></Button>
@@ -53,11 +53,10 @@ class MianPage extends React.Component {
                     </Row>
                     <Row className={(this.state.darkMode ? 'content_dark' : 'content border border_dark') + " justify-content-center align-items-end rounded"}>
                         <Col className='col-md-auto'>
-                            <Col> <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Input:</span></Col>
- 
-                             <AceEditor className='editor border border-secondary'
+                        <Row> <span className={'text-left ' + (this.state.darkMode ? 'text_dark' : 'text')}>Input:</span></Row>
+                            <AceEditor className='editor border border-secondary'
                                 mode="elm"
-                                theme= {this.state.darkMode ? "one_dark" : "xcode"}
+                                theme={this.state.darkMode ? "one_dark" : "xcode"}
                                 onChange={this.onChange}
                                 name="inputEditor"
                                 fontSize={14}
@@ -68,11 +67,13 @@ class MianPage extends React.Component {
                         </Col>
 
                         <Col className='col-md-auto'>
-                            <Col> <span className={'text-left '+ (this.state.darkMode ? 'text_dark' : 'text')}>Output:</span></Col>
+                            <Row>
+                                <span className={'text-left ' + (this.state.darkMode ? 'text_dark' : 'text')}>Output:</span>
+                            </Row>
                             <Col><AceEditor className='editor border border-secondary'
                                 mode="elm"
-                                theme= {this.state.darkMode ? "one_dark" : "xcode"}
-                                name="ootputEditor"
+                                theme={this.state.darkMode ? "one_dark" : "xcode"}
+                                name="outputEditor"
                                 value={this.state.formattedCode}
                                 readOnly={true}
                                 fontSize={14}
@@ -82,9 +83,8 @@ class MianPage extends React.Component {
                             />
                             </Col>
                         </Col>
-                        <Col className='col-md-auto'><Button class="btn btn-success pull-right" onClick={this.cp}>✂</Button>
-                        </Col>
                     </Row>
+                    <Row><Col className='text-end copy-col'><Button variant="light" className={this.state.darkMode ? "copyBtn_dark" : "copyBtn"} onClick={this.cp}></Button></Col></Row>
                 </Container>
             </div>
         )
