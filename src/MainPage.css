@@ -1,7 +1,6 @@
 .content {
     margin: 70px;
     margin-bottom: 0px;
-    color: black;
     font-family: 'Consolas';
     box-shadow: 5px 10px #ebebeb;
 }
@@ -10,6 +9,8 @@
     margin: 70px;
     margin-bottom: 0px;
     font-family: 'Consolas';
+    box-shadow: 5px 10px #6a6a6a;
+    border: 1px solid #6a6a6a;
 }
 
 .editor {
@@ -67,6 +68,40 @@
 }
 
 .themeBtn_dark:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.copy-col {
+    position: relative;
+    top: -55px;
+    left: -75px;
+}
+
+.copyBtn {
+    background-image: url(./img/content_copy_black_24dp.svg);
+    background-color: transparent !important;
+    width: 24px;
+    height: 24px;
+    border: none !important;
+}
+.copyBtn:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.copyBtn:hover {
+    background-color: #6a6a6a;
+}
+
+.copyBtn_dark {
+    background-image: url(./img/content_copy_white_24dp.svg);
+    background-color: transparent !important;
+    width: 24px;
+    height: 24px;
+    border: none !important;
+}
+.copyBtn_dark:focus {
     border: none !important;
     box-shadow: none !important;
 }
