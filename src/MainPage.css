@@ -76,6 +76,7 @@
     position: relative;
     top: -615px;
     left: -95px;
+    pointer-events: none;
 }
 
 .copyBtn {
@@ -84,6 +85,7 @@
     width: 24px;
     height: 24px;
     border: none !important;
+    pointer-events: fill;
 }
 .copyBtn:focus {
     border: none !important;
