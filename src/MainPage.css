@@ -102,6 +102,7 @@
     width: 24px;
     height: 24px;
     border: none !important;
+    pointer-events: fill;
 }
 .copyBtn_dark:focus {
     border: none !important;
