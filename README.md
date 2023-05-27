@@ -22,7 +22,7 @@
 # Introduction
 Elm-Formatter-Web is a web application allow you to format you Elm code by [elm code style](https://elm-lang.org/docs/style-guide). The formatter is based on [elm-format](https://github.com/avh4/elm-format) and the frontend is React.JS. 
 
-Welcome to try at https://www.elm-formatter.tk/
+Welcome to try at https://www.elm-formator.tk/
 
 # Cloning
 Option 1:
